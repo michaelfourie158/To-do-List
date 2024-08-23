@@ -1,3 +1,4 @@
+/* Global styles */
 *{
     margin: 0;
     padding: 0;
@@ -113,4 +114,86 @@ ul li span{
 
 ul li span:hover{
     background: #edeef0;
+}
+
+/* Media Queries */
+
+/* For tablets (768px and below) */
+@media (max-width: 768px) {
+    .todo-app {
+        max-width: 90%;
+        margin: 50px auto;
+        padding: 30px 20px 60px;
+    }
+    
+    .todo-app h2 {
+        font-size: 40px;
+    }
+    
+    .row {
+        margin-bottom: 20px;
+    }
+    
+    input {
+        font-size: 18px;
+    }
+    
+    button {
+        padding: 14px 40px;
+        font-size: 16px;
+    }
+    
+    ul li {
+        font-size: 15px;
+        padding: 10px 8px 8px 40px;
+    }
+    
+    ul li::before {
+        height: 24px;
+        width: 24px;
+        top: 10px;
+        left: 6px;
+    }
+}
+
+/* For smartphones (480px and below) */
+@media (max-width: 480px) {
+    .todo-app {
+        max-width: 95%;
+        margin: 30px auto;
+        padding: 20px 15px 50px;
+    }
+    
+    .todo-app h2 {
+        font-size: 30px;
+    }
+    
+    .row {
+        margin-bottom: 15px;
+    }
+    
+    input {
+        font-size: 16px;
+    }
+    
+    button {
+        padding: 12px 30px;
+        font-size: 14px;
+    }
+    
+    ul li {
+        font-size: 13px;
+        padding: 8px 8px 8px 30px;
+    }
+    
+    ul li::before {
+        height: 20px;
+        width: 20px;
+        top: 8px;
+        left: 5px;
+    }
+    
+    ul li span {
+        font-size: 18px;
+    }
 }
