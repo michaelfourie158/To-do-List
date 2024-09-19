@@ -1,25 +1,49 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <link rel="icon" href="./images/icon.png" />
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="To-Do List - Made by Michael Fourie" />
+    <meta name="keywords" content="To-Do List, Michael Fourie, todo app" />
+    <meta name="author" content="Michael Fourie" />
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="Images/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="Images/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="Images/favicon-16x16.png"
+    />
+    <link rel="manifest" href="/site.webmanifest" />
     <title>To-Do List - Michael Fourie</title>
-</head>
-<body>
+  </head>
+  <body>
     <div class="container">
-        <div class="todo-app">
-            <h2>To-Do List  <img src="Images/icon.png" alt="icon"></h2>
-            <div class="row">
-                <input type="text" id="input-box" placeholder="Add your task">
-                <button onclick="addTask()">Add</button>
-            </div>
-            <ul id="list-container">
-            </ul>
+      <div class="todo-app">
+        <h2>To-Do List <img src="Images/icon.png" alt="icon" /></h2>
+        <div class="row">
+          <input type="text" id="input-box" placeholder="Add your task" />
+          <button onclick="addTask()">Add</button>
         </div>
+        <ul id="list-container"></ul>
+      </div>
     </div>
 
-<script src="script.js"></script>
-</body>
+    <footer>
+      <p>Made by Michael Fourie</p>
+      <p><a href="https://michaelfourie.co.za">michaelfourie.co.za</a></p>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
 </html>
