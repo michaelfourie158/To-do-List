@@ -3,47 +3,52 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="To-Do List - Made by Michael Fourie" />
+    <meta name="description" content="To-Do List - a fast, clean task app by Michael Fourie" />
     <meta name="keywords" content="To-Do List, Michael Fourie, todo app" />
     <meta name="author" content="Michael Fourie" />
+    <meta name="theme-color" content="#0f1226" />
     <link rel="stylesheet" href="style.css" />
-    <link
-      rel="apple-touch-icon"
-      sizes="180x180"
-      href="Images/apple-touch-icon.png"
-    />
-    <link
-      rel="icon"
-      type="image/png"
-      sizes="32x32"
-      href="Images/favicon-32x32.png"
-    />
-    <link
-      rel="icon"
-      type="image/png"
-      sizes="16x16"
-      href="Images/favicon-16x16.png"
-    />
-    <link rel="manifest" href="/site.webmanifest" />
+    <link rel="apple-touch-icon" sizes="180x180" href="Images/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="Images/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="Images/favicon-16x16.png" />
+    <link rel="manifest" href="Images/site.webmanifest" />
     <title>To-Do List - Michael Fourie</title>
   </head>
   <body>
-    <div class="container">
-      <div class="todo-app">
-        <h2>To-Do List <img src="Images/icon.png" alt="icon" /></h2>
-        <div class="row">
-          <input type="text" id="input-box" placeholder="Add your task" />
-          <button onclick="addTask()">Add</button>
+    <main class="shell">
+      <section class="app" aria-labelledby="title">
+        <header class="top">
+          <div>
+            <p class="date" id="date"></p>
+            <h1 id="title">My Tasks</h1>
+          </div>
+          <div class="ring" aria-hidden="true">
+            <svg viewBox="0 0 36 36"><circle class="bg" cx="18" cy="18" r="15.9"/><circle class="fg" id="ring" cx="18" cy="18" r="15.9"/></svg>
+            <span id="pct">0%</span>
+          </div>
+        </header>
+
+        <form id="form" class="add" autocomplete="off">
+          <input id="input-box" type="text" placeholder="What needs doing?" aria-label="New task" maxlength="140" />
+          <button type="submit" aria-label="Add task">Add</button>
+        </form>
+
+        <div class="filters" role="tablist" aria-label="Filter tasks">
+          <button role="tab" data-f="all" class="on">All</button>
+          <button role="tab" data-f="active">Active</button>
+          <button role="tab" data-f="done">Done</button>
         </div>
-        <ul id="list-container"></ul>
-      </div>
-    </div>
 
-    <footer>
-      <p>Made by Michael Fourie</p>
-      <p><a href="https://michaelfourie.co.za">michaelfourie.co.za</a></p>
-    </footer>
+        <ul id="list-container" aria-live="polite"></ul>
+        <p id="empty" class="empty" hidden>Nothing here. Add a task above ✨</p>
 
+        <footer class="bar">
+          <span id="count">0 tasks left</span>
+          <button id="clear" type="button">Clear completed</button>
+        </footer>
+      </section>
+      <p class="credit">Made by Michael Fourie · <a href="https://michaelfourie.co.za">michaelfourie.co.za</a></p>
+    </main>
     <script src="script.js"></script>
   </body>
 </html>
